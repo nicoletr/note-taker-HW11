@@ -3,6 +3,9 @@ const express = require("express");
 const path = require("path")
 const notesData = require("./db/db.json")
 
+// Helper method for generating unique ids
+const uuid = require('./helpers/uuid');
+
 const app = express();
 const PORT = 3001;
 
@@ -42,11 +45,12 @@ app.post('/api/notes', (req, res) => {
       // Variable for the object we will save
       const newNote = {
         title,
-        text
+        text,
+        id: uuid()
       };
   
       const response = {
-        status: 'success',
+        status: 'Success',
         body: newNote,
       };
   
