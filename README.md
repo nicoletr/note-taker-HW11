@@ -1,11 +1,13 @@
 # Note Taker
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)<br><br>
+
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [Demonstration](#demonstration)
+* [Screenshots](#screenshots)
 * [Questions](#questions)
 * [Licensing](#licensing)
 
@@ -40,6 +42,9 @@ To contribute to this repo, follow the below steps:
 Watch a demo on how to use the application [here]()<br>
 Check out the deployed application [here]()
 
+## Screenshots
+![Screenshot of note taker homepage]()<br>
+![Screenshot of note taker notes page]()<br>
 ## Questions
 For any additional questions, you can reach me at:<br>
 * GitHub: [nicoletr](https://github.com/nicoletr) <br>
