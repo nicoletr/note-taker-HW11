@@ -40,8 +40,9 @@ const saveNote = (note) =>
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(note),
+    body: JSON.stringify(note)
   });
+
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -53,12 +54,13 @@ const deleteNote = (id) =>
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
-
+  //If the activeNote has been previously saved and has an id, set the inputs as readonly
   if (activeNote.id) {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
+    //If it is a new note with no id, let the user input into the feilds
   } else {
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
