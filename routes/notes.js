@@ -32,7 +32,7 @@ notes.post('/', (req, res) => {
     };
 
   // Obtain existing notes & add new note
-  readAndAppend(newNote, '../db/db.json')
+  readAndAppend(newNote, './db/db.json')
 
     const response = {
       status: 'Success',
