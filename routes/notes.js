@@ -1,10 +1,16 @@
+const fs = require("fs");
+const path = require("path")
 const notes = require('express').Router();
-const { readFromFile, readAndAppend } = require('../helpers/fsUtils')
+const { readAndAppend } = require('../helpers/fsUtils')
 const uuid = require('../helpers/uuid');
+
+function readDb() {
+    return JSON.parse(fs.readFileSync(path.join(__dirname, "../db/db.json"), 'utf8'));
+}
 
 //Route to fetch the notes data
 notes.get('/', (req, res) => {
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+    res.json(readDb());
     //Logs the request to the terminal
     console.info(`${req.method} request recieved for notes`)
 });
@@ -26,7 +32,7 @@ notes.post('/', (req, res) => {
     };
 
   // Obtain existing notes & add new note
-  readAndAppend(newNote, './db/db.json')
+  readAndAppend(newNote, '../db/db.json')
 
     const response = {
       status: 'Success',
@@ -39,5 +45,9 @@ notes.post('/', (req, res) => {
     res.status(500).json('Error in posting note');
   }
 });
+
+//Delete route
+// notes.delete('/:id', (req,res) => {
+// })
 
 module.exports = notes;
