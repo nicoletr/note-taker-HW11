@@ -18,5 +18,10 @@
         "title": "BLOODY HELL",
         "text": "help",
         "id": "cbd7"
+    },
+    {
+        "title": "New Note",
+        "text": "This is a new note",
+        "id": "01fd"
     }
 ]
