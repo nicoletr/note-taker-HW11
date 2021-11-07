@@ -19,7 +19,7 @@ app.get('/notes', (req, res) => {
 });
 
 //Wildard route which returns the index.html **ALWAYS GOES AT END**
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
