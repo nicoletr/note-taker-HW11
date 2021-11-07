@@ -47,7 +47,19 @@ notes.post('/', (req, res) => {
 });
 
 //Delete route
-// notes.delete('/:id', (req,res) => {
-// })
+notes.delete('/:id', (req,res) => {
+    const notes = readDb(); 
+    const selectedNote = req.params.id;
+
+    const filtered = notes.filter((note) => note.id !== selectedNote);
+
+    fs.writeFile(path.join(__dirname, "../db/db.json"), JSON.stringify(filtered), function(err) {
+        if(err) {
+            return console.log(err); 
+        }
+        console.log((`Note ${req.params.id} had been deleted`));
+        res.json(filtered);
+    });
+})
 
 module.exports = notes;
