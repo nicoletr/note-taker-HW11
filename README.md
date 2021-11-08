@@ -39,12 +39,12 @@ To contribute to this repo, follow the below steps:
 5. Wait for approvals, comments, and/or change requests
 ```
 ## Demonstration
-Watch a demo on how to use the application [here]()<br>
-Check out the deployed application [here]()
+Watch a demo on how to use the application [here](https://watch.screencastify.com/v/ugYs8EgQAIHd2UXjdJPv)<br>
+Check out the deployed application [here](https://still-bayou-05497.herokuapp.com/)
 
 ## Screenshots
-![Screenshot of note taker homepage]()<br>
-![Screenshot of note taker notes page]()<br>
+![Screenshot of note taker homepage](/assets/home-page.png)<br>
+![Screenshot of note taker notes page](/assets/notes-page.png)<br>
 ## Questions
 For any additional questions, you can reach me at:<br>
 * GitHub: [nicoletr](https://github.com/nicoletr) <br>
